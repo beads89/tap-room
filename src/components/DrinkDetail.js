@@ -14,6 +14,22 @@ function DrinkDetail(props) {
     drinkHeader = <h3>{drink.name} - All Out</h3>;
   };
 
+  let drinkOOS = "";
+
+  if (drink.quantity === 0) {
+    drinkOOS = <button disabled>Out of Stock</button>
+  } else {
+    drinkOOS = <button onClick={onClickingBuy}>Pour 1 Pint!</button>
+  }
+
+  let drinkOverStock = "";
+
+  if (drink.quantity === 124) {
+    drinkOverStock = <button disabled>Keg Full</button>
+  } else {
+    drinkOverStock = <button onClick={onClickingRefill}>Refill Keg with 1 Pint.</button>
+  }
+
   return (
     <React.Fragment>
       <h1>Drink Details</h1>
@@ -24,8 +40,8 @@ function DrinkDetail(props) {
       <p>{drink.description}</p>
       <button onClick={onClickingEdit}>Update Drink</button>
       <button onClick={()=> onClickingDelete(drink.id)}>Remove Drink from List</button>
-      <button onClick={onClickingBuy}>Pour 1 Pint!</button>
-      <button onClick={onClickingRefill}>Refill Keg with 1 Pint.</button>
+      {drinkOOS}
+      {drinkOverStock}
       <hr/>
     </React.Fragment>
   );
