@@ -37,7 +37,7 @@ function DrinkDetail(props) {
       <p>Brand: {drink.brand}</p>
       <p>ABV: {drink.alcoholContent}%</p>
       <p>Price: ${drink.price}</p>
-      <p>{drink.description}</p>
+      <p>About: {drink.description}</p>
       <button onClick={onClickingEdit}>Update Drink</button>
       <button onClick={()=> onClickingDelete(drink.id)}>Remove Drink from List</button>
       {drinkOOS}
