@@ -44,11 +44,34 @@ class DrinkControl extends React.Component {
     this.setState({selectedDrink: selectedDrink});
   }
 
+  handleEditClick = () => {
+    this.setState({editing: true});
+  }
+
+  handleDeletingDrink = (id) => {
+    const newMainDrinkList = this.state.mainDrinkList.filter(drink => drink.id !== id);
+    this.setState({
+      mainDrinkList: newMainDrinkList,
+      selectedDrink: null
+    });
+  }
+
+  handleEditingDrinkInList = (drinkToEdit) => {
+    const editedMainDrinkList = this.state.mainDrinkList
+    .filter(drink => drink.id !== this.state.selectedDrink.id)
+    .concat(drinkToEdit);
+    this.setState({
+      mainDrinkList: editedMainDrinkList,
+      editing: false,
+      selectedDrink: null
+    });
+  }
+
   render() {
     let currentlyVisibleState = null;
     let buttonText = null;
 
-    currentlyVisibleState = <DrinkList drinkList={this.state.mainDrinkList} onItemSelection={this.handleItemDetail}/>;
+    currentlyVisibleState = <DrinkList drinkList={this.state.mainDrinkList} onDrinkSelection={this.handleDrinkDetail}/>;
     buttonText = "add drink"
 
     return (
