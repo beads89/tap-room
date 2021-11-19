@@ -5,17 +5,16 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Drink(props) {
   return (
-      <div class="container">
     <React.Fragment>
-      <div class="row">
-        <div class="col-3">
-          <h2>{props.name}</h2>
-          <button onClick= {() => props.whenDrinkClicked(props.id)}>Drink Details</button>
+      <div className="container">
+        <div className="row">
+          <div className="col">
+            <h2>{props.name}</h2>
+            <button onClick= {() => props.whenDrinkClicked(props.id)}>Drink Details</button>
+          </div>
         </div>
       </div>
-      <hr/>
     </React.Fragment>
-      </div>
   );
 }
 
