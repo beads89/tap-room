@@ -10,6 +10,9 @@ function EditDrink (props) {
     event.preventDefault();
     props.onEditDrink({
       name: event.target.name.value,
+      brand: event.target.brand.value,
+      price: event.target.price.valueAsNumber,
+      alcoholContent: event.target.alcoholContent.valueAsNumber,
       quantity: event.target.quantity.valueAsNumber,
       description: event.target.description.value,
       id: drink.id});

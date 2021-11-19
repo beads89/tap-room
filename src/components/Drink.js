@@ -13,6 +13,9 @@ function Drink(props) {
 
 Drink.propTypes = {
   name: PropTypes.string.isRequired,
+  brand: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+  alcoholContent: PropTypes.number.isRequired,
   quantity: PropTypes.number.isRequired,
   description: PropTypes.string.isRequired,
   id: PropTypes.string,

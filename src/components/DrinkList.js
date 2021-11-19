@@ -10,6 +10,9 @@ function DrinkList(props) {
       <Drink
         whenDrinkClicked = {props.onDrinkSelection}
         name={drink.name}
+        brand={drink.brand}
+        price={drink.price}
+        alcoholContent={drink.alcoholContent}
         quantity={drink.quantity}
         description={drink.description}
         id={drink.id}

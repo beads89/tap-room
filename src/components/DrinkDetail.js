@@ -18,7 +18,10 @@ function DrinkDetail(props) {
     <React.Fragment>
       <h1>Drink Details</h1>
       {drinkHeader}
-      <p><em>{drink.description}</em></p>
+      <p>Brand: {drink.brand}</p>
+      <p>ABV: {drink.alcoholContent}%</p>
+      <p>Price: ${drink.price}</p>
+      <p>{drink.description}</p>
       <button onClick={onClickingEdit}>Update Drink</button>
       <button onClick={()=> onClickingDelete(drink.id)}>Remove Drink from List</button>
       <button onClick={onClickingBuy}>Pour 1 Pint!</button>
