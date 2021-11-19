@@ -6,10 +6,10 @@ function DrinkDetail(props) {
 
   let drinkHeader = "";
 
-  if (drink.quantity > 0) {
-    drinkHeader = <h3>{drink.name} - {drink.quantity} Pints Left.</h3>;
-  } else if (drink.quantity <= 10) {
+  if (drink.quantity <= 10 && drink.quantity > 0) {
     drinkHeader = <h3>{drink.name} - Running Low! Only {drink.quantity} Pints Left!</h3>
+  } else if (drink.quantity > 10) {
+    drinkHeader = <h3>{drink.name} - {drink.quantity} Pints Left.</h3>;
   } else {
     drinkHeader = <h3>{drink.name} - All Out</h3>;
   };

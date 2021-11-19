@@ -11,7 +11,7 @@ function ReusuableForm(props) {
           name='name'
           placeholder="Drink Name" />
         <input
-          type='text'
+          type='number'
           name='quantity'
           min='0'
           max='126'

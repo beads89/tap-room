@@ -40,7 +40,7 @@ class DrinkControl extends React.Component {
   }
 
   handleDrinkDetail = (id) => {
-    const selectedDrink = this.state.mainDrinkList.filter(drink => drink.id === id)
+    const selectedDrink = this.state.mainDrinkList.filter(drink => drink.id === id)[0];
     this.setState({selectedDrink: selectedDrink});
   }
 
@@ -67,13 +67,60 @@ class DrinkControl extends React.Component {
     });
   }
 
+  handleBuyDrink = () => {
+    let buyDrink = this.state.mainDrinkList.filter(drink => drink.id === this.state.selectedDrink.id)[0];
+
+    if (buyDrink.quantity <= 0) {
+      alert(buyDrink.name + " is all out. Please refill the keg or choose another drink.");
+    } else {
+      buyDrink = buyDrink.quantity--;
+
+      this.setState({
+        buyDrink: buyDrink
+      });
+    }
+  }
+
+  handleRefillDrink = () => {
+    let refillDrink = this.state.mainDrinkList.filter(drink => drink.id === this.state.selectedDrink.id)[0];
+    if (refillDrink.quantity >= 124) {
+      alert("Keg is at max capacity, pour one out before trying to refill!")
+    } else {
+      refillDrink = refillDrink.quantity++;
+
+      this.setState({
+        refillDrink: refillDrink
+      });
+    }
+  }
+
   render() {
     let currentlyVisibleState = null;
     let buttonText = null;
 
+    if (this.state.editing) {
+      currentlyVisibleState = <EditDrink
+        drink = {this.state.selectedDrink}
+        onEditDrink = {this.handleEditingDrinkInList} />
+      buttonText = "Cancel and Return to List";
+
+    } else if (this.state.selectedDrink != null) {
+      currentlyVisibleState = <DrinkDetail
+        drink = {this.state.selectedDrink}
+        onClickingDelete = {this.handleDeletingDrink}
+        onClickingEdit = {this.handleEditClick}
+        onClickingBuy = {this.handleBuyDrink}
+        onClickingRefill = {this.handleRefillDrink} />
+        buttonText = "Return to Drink List";
+
+    } else if (this.state.formVisibleOnPage) {
+      currentlyVisibleState = <NewDrinkForm onNewDrinkCreation = {this.handleAddingNewDrinkToList} />
+      buttonText = "Return to Drink List";
+
+    } else {
     currentlyVisibleState = <DrinkList drinkList={this.state.mainDrinkList} onDrinkSelection={this.handleDrinkDetail}/>;
     buttonText = "add drink"
-
+    }
     return (
       <React.Fragment>
         <h1>hello!</h1>
