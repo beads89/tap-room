@@ -31,6 +31,19 @@ class DrinkControl extends React.Component {
     }
   }
 
+  handleAddingNewDrinkToList = (newDrink) => {
+    const newMainDrinkList = this.state.mainDrinkList.concat(newDrink);
+    this.setState({
+      mainDrinkList: newMainDrinkList,
+      formVisibleOnPage: false
+    });
+  }
+
+  handleDrinkDetail = (id) => {
+    const selectedDrink = this.state.mainDrinkList.filter(drink => drink.id === id)
+    this.setState({selectedDrink: selectedDrink});
+  }
+
   render() {
     let currentlyVisibleState = null;
     let buttonText = null;
@@ -42,7 +55,7 @@ class DrinkControl extends React.Component {
       <React.Fragment>
         <h1>hello!</h1>
         {currentlyVisibleState}
-        <button>{buttonText}</button>
+        <button onClick={this.handleClick}>{buttonText}</button>
       </React.Fragment>
     );
   }
