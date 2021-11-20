@@ -10,7 +10,7 @@ function Drink(props) {
         <div className="row">
           <div className="col">
             <h2>{props.name}</h2>
-            <button onClick= {() => props.whenDrinkClicked(props.id)}>Drink Details</button>
+            <button className="btn btn-primary" onClick= {() => props.whenDrinkClicked(props.id)}>Drink Details</button>
           </div>
         </div>
       </div>

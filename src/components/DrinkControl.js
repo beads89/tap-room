@@ -126,7 +126,7 @@ class DrinkControl extends React.Component {
         <h1 className="text-center">Tappy's Tap Room</h1>
         <hr />
         {currentlyVisibleState}
-        <button onClick={this.handleClick}>{buttonText}</button>
+        <button className="btn btn-secondary" onClick={this.handleClick}>{buttonText}</button>
       </React.Fragment>
     );
   }

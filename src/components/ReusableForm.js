@@ -32,13 +32,13 @@ function ReusableForm(props) {
           name='quantity'
           min='0'
           max='124'
-          placeholder="Pints"
+          defaultValue="124"
           required /> <br />
         <textarea
           name='description'
           placeholder='Description'
           required /> <br />
-        <button type='submit'>Add Drink!</button>
+        <button className="btn btn-primary" type='submit'>Add Drink!</button>
       </form>
     </React.Fragment>
   );
