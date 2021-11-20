@@ -17,17 +17,17 @@ function DrinkDetail(props) {
   let drinkOOS = "";
 
   if (drink.quantity === 0) {
-    drinkOOS = <button disabled>Out of Stock</button>
+    drinkOOS = <button className="btn" disabled>Out of Stock</button>
   } else {
-    drinkOOS = <button onClick={onClickingBuy}>Pour 1 Pint!</button>
+    drinkOOS = <button className="btn btn-success" onClick={onClickingBuy}>Pour 1 Pint!</button>
   }
 
   let drinkOverStock = "";
 
   if (drink.quantity === 124) {
-    drinkOverStock = <button disabled>Keg Full</button>
+    drinkOverStock = <button className="btn" disabled>Keg Full</button>
   } else {
-    drinkOverStock = <button onClick={onClickingRefill}>Refill Keg with 1 Pint.</button>
+    drinkOverStock = <button className="btn btn-info" onClick={onClickingRefill}>Refill Keg with 1 Pint.</button>
   }
 
   return (
@@ -39,10 +39,10 @@ function DrinkDetail(props) {
       <p>ABV: {drink.alcoholContent}%</p>
       <p>Price: ${drink.price}</p>
       <p>About: {drink.description}</p>
-      <button onClick={onClickingEdit}>Update Drink</button>
-      <button onClick={()=> onClickingDelete(drink.id)}>Remove Drink from List</button>
-      {drinkOOS}
-      {drinkOverStock}
+      <button className="btn btn-primary" onClick={onClickingEdit}>Update Drink</button>  
+      <button className="btn btn-danger" onClick={()=> onClickingDelete(drink.id)}>Remove Drink from List</button>  
+      {drinkOOS}  
+      {drinkOverStock}  
       <hr/>
     </React.Fragment>
   );
