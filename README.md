@@ -1,72 +1,62 @@
-# Getting Started with Create React App
+# Tap Room
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### An application that allows a user to add drinks and edit different properties of those drinks in a tap room menu.
 
-## Available Scripts
+#### Created By: Brandon Eads
 
-In the project directory, you can run:
+## Technologies Used
 
-### `npm start`
+* CSS
+* HTML
+* JavaScript
+* React.js
+* Node.js
+* Bootstrap Framework for CSS and JavaScript
+* React-Bootstrap
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Description
 
-### `npm test`
+This application allows the user to create a drink menu for a tap room. It includes the ability to add a name, brand, price, quantity of pints in a keg(124 by default), alcohol by volume and a description for their drink. All added drinks are displayed on the main page and a "details" button is provided to open each one individually to view the previous inputs. A user can edit and delete a drink, or add and subtract a pint from the total displayed. If the total pints are equal to or less than 10, the counter message changes to inspire urgency in ordering that particular drink. If the total pints are 0, the "sell" button is greyed out and replaced with a disabled "Out of Stock" button. Vice versa, if there are the maximum of 124 pints, the "add" button is greyed out and replaced with a disabled "Full" button.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Setup and Usage Instructions
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Technology Requirements
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* Download and install a code text editor. Ex: [VS Code](https://code.visualstudio.com/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### Installation
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+* Clone [this](https://github.com/beads89/tap-room) repository, or download and open the Zip on your local machine
+* Open the tap-room folder in your preferred text editor
+* To install required packages, navigate to the tap-room directory in the terminal and type the following command:
+  - npm install
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* To run the project:
+  - Navigate to the tap-room folder in the command line or terminal
+    - Run the command "npm start"
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Known Bugs
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+* Drinks do not show up as side by side columns as expected.
 
-## Learn More
+### License
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+[MIT License](https://opensource.org/licenses/MIT)
+Copyright 2021 Brandon Eads
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Support and contact details
 
-### Code Splitting
+* [Brandon Eads](github.com/beads89) <Brandon181989@hotmail.com>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
 ### Deployment
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 
