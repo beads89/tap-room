@@ -119,11 +119,12 @@ class DrinkControl extends React.Component {
 
     } else {
     currentlyVisibleState = <DrinkList drinkList={this.state.mainDrinkList} onDrinkSelection={this.handleDrinkDetail}/>;
-    buttonText = "add drink"
+    buttonText = "Add Drink"
     }
     return (
       <React.Fragment>
-        <h1>hello!</h1>
+        <h1 className="text-center">Tappy's Tap Room</h1>
+        <hr />
         {currentlyVisibleState}
         <button onClick={this.handleClick}>{buttonText}</button>
       </React.Fragment>

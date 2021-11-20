@@ -33,6 +33,7 @@ function DrinkDetail(props) {
   return (
     <React.Fragment>
       <h1>Drink Details</h1>
+      <hr />
       {drinkHeader}
       <p>Brand: {drink.brand}</p>
       <p>ABV: {drink.alcoholContent}%</p>

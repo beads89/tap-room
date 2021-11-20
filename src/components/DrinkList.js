@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 function DrinkList(props) {
   return (
     <React.Fragment>
-      <hr />
       {props.drinkList.map((drink) =>
       <Drink
         whenDrinkClicked = {props.onDrinkSelection}

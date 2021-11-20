@@ -14,6 +14,7 @@ function Drink(props) {
           </div>
         </div>
       </div>
+      <hr />
     </React.Fragment>
   );
 }
